@@ -463,16 +463,16 @@ def display_cols(df):
 
 with st.spinner("⏳ Loading data dari Google Drive..."):
     gdf = load_all_data()
-    gdf_kabupaten = load_boundary(KABUPATEN_FILENAME)
-    gdf_kecamatan = load_boundary(KECAMATAN_FILENAME)
-    gdf_rtrw = load_boundary(RTRW_FILENAME)
+    gdf_kabupaten = load_boundary((constant) KABUPATEN_FILENAME: Literal['Batas Administrasi Kabupaten Bandung.geojson'] = "Batas Administrasi Kabupaten Bandung.geojson")))
+    gdf_kecamatan = load_boundary((KECAMATAN_FILENAME) (constant) KECAMATAN_FILENAME: Literal['Batas Administrasi Kecamatan Katapang.geojson'] = "Batas Administrasi Kecamatan Katapang.geojson"))
+    gdf_rtrw = load_boundary(RTRW_FILENAME) (constant) RTRW_FILENAME: Literal['RTRW.geojson'] = "RTRW.geojson"
 
 # ✅ DEBUG: Show status di sidebar
 with st.sidebar:
     st.markdown("### 📁 Status Data:")
     
     st.write(f"📍 **DATA UTAMA:** {'✅' if not gdf.empty else '❌'}")
-    st.write(f"   Nama: `{DATA_FILENAME}`")
+    st.write(f"   Nama: `{DATA_FILENAME}`")(constant) DATA_FILENAME: Literal['DATA PEMANFAATAN.geojson'] = "DATA PEMANFAATAN.geojson"
     if not gdf.empty:
         st.write(f"   Rows: {len(gdf)}")
     
@@ -783,7 +783,7 @@ elif st.session_state.current_page == "admin":
                 ✅ **Status:** Aktif
                 
                 - 📂 **Folder ID:** `{FOLDER_ID}`
-                - 🔗 **Link:** [Open in Drive](https://drive.google.com/drive/folders/{FOLDER_ID})
+                - 🔗 **Link:** [Open in Drive](https://drive.google.com/drive/folders/{1dTdLnvUyRgFDKCSLLKH83ZOb2fou0Mci})
                 - ⚙️ **Sinkronisasi:** Otomatis saat save
                 - 📤 **Upload File:** Otomatis
                 - 📥 **Download File:** Otomatis saat startup
